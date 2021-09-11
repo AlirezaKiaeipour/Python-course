@@ -66,4 +66,4 @@ Fibonacci series
 
 2. Draw a Box with Nested Loops
 
-
+![Screenshot (36)](https://user-images.githubusercontent.com/88143329/132942594-3c60ddaf-221f-4388-92fb-f6662e723c45.png)
