@@ -38,6 +38,7 @@ class Snake(arcade.Sprite):
         self.score -= 1
 
     def eat_apple(self):
+        self.score += 1
         self.length +=1
 
 class Apple(arcade.Sprite):
