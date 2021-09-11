@@ -34,6 +34,9 @@ Fibonacci series
 2. TicTacToe Game
 3. Turtle shape
 
+ ![turtle](https://user-images.githubusercontent.com/88143329/132942280-0da92e78-2899-43ad-8909-8fa3d17c7433.png)
+
+
 ## Assignment6
 1. Store project
 
