@@ -60,7 +60,7 @@ Fibonacci series
 1. Media project
 
 ## Assignment11
-1. Snake with arcade library
+1. Snake Game with arcade library
 
 ![Screenshot (35)](https://user-images.githubusercontent.com/88143329/132942579-ee2f5954-f58e-4ef5-96b7-721083927137.png)
 
@@ -69,6 +69,8 @@ Fibonacci series
 ![Screenshot (36)](https://user-images.githubusercontent.com/88143329/132942594-3c60ddaf-221f-4388-92fb-f6662e723c45.png)
 
 ## Assignment12
+SpaceCraft Game with arcade library
+
 ✅ The enemy ship explodes as a result of the bullet.
 
 ✅ The time interval between the arrival of enemies is random.
