@@ -8,7 +8,7 @@ class SpaceCraft(arcade.Sprite):
         super().__init__(":resources:images/space_shooter/playerShip1_blue.png")
         self.width = 48
         self.height = 48
-        self.speed = 4
+        self.speed = 7
         self.center_x = w // 2
         self.center_y = 38
         self.angle = 0
@@ -16,9 +16,8 @@ class SpaceCraft(arcade.Sprite):
         self.change_x = 0
         self.bullet_list = []
         self.score = 0
-        self.counter = 1
-        
-    
+        self.control_speed = 0
+            
     def rotate(self):
         self.angle += self.change_angle * self.speed
 
@@ -27,7 +26,7 @@ class SpaceCraft(arcade.Sprite):
 
     def fire(self):
         self.bullet_list.append(Bullet(self))
-##################################################################################
+
 class Bullet(arcade.Sprite):
     def __init__(self,host):
         super().__init__(":resources:images/space_shooter/laserRed01.png")
@@ -39,7 +38,7 @@ class Bullet(arcade.Sprite):
     def move(self):
         self.center_x -= self.speed * math.sin(math.radians(self.angle))
         self.center_y += self.speed * math.cos(math.radians(self.angle))
-###################################################################################
+
 class Enemy(arcade.Sprite):
     def __init__(self,w,h):
         super().__init__(":resources:images/space_shooter/playerShip3_orange.png")
@@ -47,12 +46,14 @@ class Enemy(arcade.Sprite):
         self.height = 48
         self.center_x = random.randint(1,w)
         self.center_y = h
-        self.speed = 2 
+        self.speed = 2
         self.angle = 180
         
     def move(self):
-        self.center_y -= self.speed 
-#################################################################
+        self.center_y -= self.speed
+
+    def control_speed(self, s):
+        self.speed += s
 
 class Game(arcade.Window):
     def __init__(self):
@@ -67,8 +68,6 @@ class Game(arcade.Window):
         self.space = SpaceCraft(self.wid)
         self.enemy_list = []
         self.start = time.time()
-
-        
 
     def on_draw(self):
         arcade.start_render()
@@ -87,12 +86,13 @@ class Game(arcade.Window):
             time.sleep(1)
             arcade.exit()
     
-                
-
     def on_update(self, delta_time: float):
         self.end = time.time()
-        if self.end - self.start > random.randint(3,15):
+        if self.end - self.start > random.randint(3,8):
             self.enemy_list.append(Enemy(self.wid,self.hei))
+            for i in self.enemy_list:
+                i.control_speed(self.space.control_speed)
+            self.space.control_speed +=0.1
             self.start =  time.time()
         self.space.move()
         self.space.rotate()
@@ -140,4 +140,3 @@ class Game(arcade.Window):
 
 game =Game()
 arcade.run()
-
