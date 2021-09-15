@@ -60,10 +60,34 @@ Fibonacci series
 1. Media project
 
 ## Assignment11
-1. Snake with arcade library
+1. Snake Game with arcade library
 
 ![Screenshot (35)](https://user-images.githubusercontent.com/88143329/132942579-ee2f5954-f58e-4ef5-96b7-721083927137.png)
 
 2. Draw a Box with Nested Loops
 
 ![Screenshot (36)](https://user-images.githubusercontent.com/88143329/132942594-3c60ddaf-221f-4388-92fb-f6662e723c45.png)
+
+## Assignment12
+SpaceCraft Game with arcade library
+
+✅ The enemy ship explodes as a result of the bullet.
+
+✅ The time interval between the arrival of enemies is random.
+
+✅ When any enemy or bullet leaves the game screen, its object is removed from the list.
+
+✅ At the beginning of the game, three hearts should be printed in the lower left corner, which indicates the player's health.
+
+✅ Display player score in the lower right corner.
+
+✅ As each enemy reaches our planet, one health of players is lost.
+
+✅ When health runs out, the screen turns black and the GAME OVER message is printed.
+
+✅ The speed of the enemy will slowly increase.
+
+✅ Play the sound to fire and to explosion the plane.
+
+![Screenshot (40)](https://user-images.githubusercontent.com/88143329/133398922-e3918d2f-21f4-4473-8225-1fbc7e77a978.png)
+
