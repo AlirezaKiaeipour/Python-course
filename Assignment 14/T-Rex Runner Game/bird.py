@@ -11,4 +11,4 @@ class Bird(arcade.AnimatedWalkingSprite):
         self.height = 50
         self.center_x = x
         self.center_y = random.randint(109,120)
-        self.change_x -= s
+        self.change_x -= (s+1) 

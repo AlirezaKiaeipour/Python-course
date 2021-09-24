@@ -13,7 +13,7 @@ class Game(arcade.View):
         self.hei = 700
         self.speed = 3
         super().__init__()
-        arcade.set_background_color(arcade.color.WHITE_SMOKE)
+        arcade.set_background_color(arcade.color.LIGHT_GRAY)
         self.jump = arcade.load_sound(":resources:sounds/jump3.wav")
         self.background = arcade.load_texture("img/black.png")
         self.player  = Player()
@@ -61,7 +61,7 @@ class Game(arcade.View):
             bird.draw()
 
         if self.count % 20 == 0:
-            arcade.set_background_color(arcade.color.WHITE_SMOKE)
+            arcade.set_background_color(arcade.color.LIGHT_GRAY)
         elif self.count % 10 ==0:
             arcade.set_background_color(arcade.color.BLACK)
          
@@ -104,7 +104,6 @@ class Game(arcade.View):
             self.bird = Bird(self.wid,self.speed)
             self.bird_list.append(self.bird)
             self.start_bird_time = time.time()
- 
         self.physic.update()
         self.player.update_animation()
        
