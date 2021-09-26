@@ -1,8 +1,8 @@
 import random
 
 while True:
-    tas = random.randint(1,2)
-    if tas == 2:
+    tas = random.randint(1,6)
+    if tas == 6:
         print('you lucky  AGANE!!!! :', tas)
         
     else:
