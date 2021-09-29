@@ -1,3 +1,4 @@
+from arcade.key import S
 from bird import Bird
 import time
 import random
@@ -6,6 +7,7 @@ from cac import Onecoc, Threecac, Twocac
 from player import Player
 from land import Land
 import arcade
+
 
 class Game(arcade.View):
     def __init__(self):
@@ -22,6 +24,7 @@ class Game(arcade.View):
         self.bird_list = arcade.SpriteList()
         self.max_score = 0
         self.count = 0
+        self.gameover = False
         for land in range(0,801,80):
             self.land_list.append(Land(land,5))
         self.physic = arcade.PhysicsEnginePlatformer(self.player,self.land_list,gravity_constant=0.5)
@@ -68,23 +71,12 @@ class Game(arcade.View):
         arcade.draw_text(f"Score: {self.player.score}",630,670,arcade.color.RED,20)
         arcade.draw_text(f"Max Score: {max(max_list)}",20,670,arcade.color.RED,20)
         
-        for cac in self.cac_list:
-            if check_for_collision(self.player,cac):
-                arcade.draw_lrwh_rectangle_textured(0,0,self.wid,self.hei,self.background)
-                arcade.draw_text("Game Over",230,400,arcade.color.WHITE_SMOKE,50,bold=True)
-                arcade.draw_text("Press *Space* to Play Agane",230,330,arcade.color.WHITE_SMOKE,20)
-                arcade.draw_text("Press *Esc* to Exit Game ",250,280,arcade.color.WHITE_SMOKE,20)
-                max_list.append(self.player.score)
-                time.sleep(2)
-
-        for bird in self.bird_list:
-            if check_for_collision(self.player,bird):
-                arcade.draw_lrwh_rectangle_textured(0,0,self.wid,self.hei,self.background)
-                arcade.draw_text("Game Over",230,400,arcade.color.WHITE_SMOKE,50,bold=True)
-                arcade.draw_text("Press *Space* to play agane",230,330,arcade.color.WHITE_SMOKE,20)
-                arcade.draw_text("Press *Esc* to Exit Game ",250,280,arcade.color.WHITE_SMOKE,20)
-                max_list.append(self.player.score)
-                time.sleep(2)
+        if self.gameover == True:
+            arcade.draw_lrwh_rectangle_textured(0,0,self.wid,self.hei,self.background)
+            arcade.draw_text("Game Over",230,400,arcade.color.WHITE_SMOKE,50,bold=True)
+            arcade.draw_text("Press *Space* to Play Agane",230,330,arcade.color.WHITE_SMOKE,20)
+            arcade.draw_text("Press *Esc* to Exit Game ",250,280,arcade.color.WHITE_SMOKE,20)
+            time.sleep(2)
                 
     def on_update(self, delta_time: float):
         self.player.score +=0.5
@@ -118,6 +110,16 @@ class Game(arcade.View):
             if cac.center_x < -30:
                 self.cac_list.remove(cac)
 
+        for cac in self.cac_list:
+            if check_for_collision(self.player,cac):
+                self.gameover = True
+                max_list.append(self.player.score)
+
+        for bird in self.bird_list:
+            if check_for_collision(self.player,bird):
+                self.gameover = True
+                max_list.append(self.player.score)
+
     def on_key_press(self,key,modifiers):
         
         if key== arcade.key.UP:
@@ -127,12 +129,12 @@ class Game(arcade.View):
         if key== arcade.key.SPACE:
             self.window.show_view(Game())
         if key== arcade.key.DOWN:
-            self.player.walk_down_textures = [arcade.load_texture("img/down1.png")]
+            self.walk_down_textures = [arcade.load_texture("img/down0.png")]
         if key== arcade.key.ESCAPE:
             arcade.exit()
     
     def on_key_release(self,key,_modifiers):
-        self.player.walk_down_textures = self.player.stand_right_textures
+            self.player.walk_down_textures = self.player.walk_right_textures
            
 max_list = [0]
 window = arcade.Window(800,700,"T-Rex Game")
