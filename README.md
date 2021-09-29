@@ -115,3 +115,23 @@ SpaceCraft Game with arcade library
 ✅ The speed of the game will slowly increase.
 
 ![Screenshot (46)](https://user-images.githubusercontent.com/88143329/134370168-0f6a61bf-3c89-4463-afb7-b04f795977b9.png)
+
+## Assignment15
+
+⚫ Telegram Bot
+
+✅ Guess the number Game.(/game)
+
+✅ Receive date of birth and calculate age.(/age)
+
+✅ Receive a sentence in English from the user and send it as a voice.(/voice)
+
+✅ Receive a YouTube link from the user and send it as a video.(/youtube)
+
+✅ Receive a string from the user and generate its qr code.(/qrcode)
+
+✅ Receive an array from the user and print the largest value.(/max)
+
+✅ Receive an array from the user and print the index of the largest value.(/argmax)
+
+✅ Display the description.(/help)
