@@ -1,0 +1,926 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>540</width>
+    <height>239</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Unit Converter</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(214, 230, 236);
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="tabWidget">
+    <property name="geometry">
+     <rect>
+      <x>6</x>
+      <y>-1</y>
+      <width>531</width>
+      <height>201</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(214, 230, 236);
+</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="Tab1">
+     <attribute name="title">
+      <string>Weight</string>
+     </attribute>
+     <widget class="QComboBox" name="combo_fw">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(99, 193, 50);
+font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius:5px</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>gram</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kilogram</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pound</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ton</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>from:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Input: </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="textbox_w1">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>90</y>
+        <width>113</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(155, 193, 188);
+font: 700 10pt &quot;Segoe UI&quot;;
+border-radius:10px;
+color: rgb(34, 109, 121);</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="combo_tw">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#ff6978;
+font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius:5px</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>gram</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kilogram</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Pound</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ton</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>50</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>to:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Input: </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="textbox_w2">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>90</y>
+        <width>113</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(155, 193, 188);
+border-radius:10px;
+color: rgb(34, 109, 121);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_weight">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>481</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(155, 197, 61);
+font: 700 13pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color: rgb(143, 198, 40);
+}
+QPushButton:pressed
+{
+	
+	background-color: rgb(112, 152, 31);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Convert</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_2">
+     <attribute name="title">
+      <string>Length</string>
+     </attribute>
+     <widget class="QComboBox" name="combo_fl">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(99, 193, 50);
+font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius:5px</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>millimeter</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Centimeter</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Meter</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kilometers</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Inches</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>50</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>to:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="textbox_l2">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>90</y>
+        <width>113</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(155, 193, 188);
+border-radius:10px;
+color: rgb(34, 109, 121);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>from:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Input: </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Input: </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="textbox_l1">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>90</y>
+        <width>113</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(155, 193, 188);
+border-radius:10px;
+color: rgb(34, 109, 121);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_length">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>481</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(155, 197, 61);
+font: 700 13pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color: rgb(143, 198, 40);
+}
+QPushButton:pressed
+{
+	
+	background-color: rgb(112, 152, 31);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Convert</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="combo_tl">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#ff6978;
+font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius:5px</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>millimeter</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Centimeter</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Meter</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kilometers</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Inches</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab">
+     <attribute name="title">
+      <string>Temperature</string>
+     </attribute>
+     <widget class="QComboBox" name="combo_ft">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(99, 193, 50);
+font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius:5px</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Celsius</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fahrenheit</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kelvin</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_9">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>50</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>to:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="textbox_t2">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>90</y>
+        <width>113</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(155, 193, 188);
+border-radius:10px;
+color: rgb(34, 109, 121);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>from:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_11">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Input: </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_12">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Input: </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="textbox_t1">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>90</y>
+        <width>113</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(155, 193, 188);
+border-radius:10px;
+color: rgb(34, 109, 121);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_temp">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>481</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(155, 197, 61);
+font: 700 13pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color: rgb(143, 198, 40);
+}
+QPushButton:pressed
+{
+	
+	background-color: rgb(112, 152, 31);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Convert</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="combo_tt">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#ff6978;
+font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius:5px</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Celsius</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Fahrenheit</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Kelvin</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="tab_3">
+     <attribute name="title">
+      <string>Digital volume</string>
+     </attribute>
+     <widget class="QComboBox" name="combo_fd">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(99, 193, 50);
+font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius:5px</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Bit</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>byte</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>KB</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MB</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>GB</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TB</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="label_13">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>50</y>
+        <width>21</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>to:</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="textbox_d2">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>90</y>
+        <width>113</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(155, 193, 188);
+border-radius:10px;
+color: rgb(34, 109, 121);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_14">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>41</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>from:</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_15">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Input: </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_16">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>100</y>
+        <width>49</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgb(26, 83, 92);
+font: 700 11pt &quot;Segoe UI&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Input: </string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="textbox_d1">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>90</y>
+        <width>113</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(155, 193, 188);
+border-radius:10px;
+color: rgb(34, 109, 121);
+font: 700 10pt &quot;Segoe UI&quot;;</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_digital">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>140</y>
+        <width>481</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton{
+	background-color: rgb(155, 197, 61);
+font: 700 13pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius: 10px;
+}
+QPushButton:hover
+{
+	background-color: rgb(143, 198, 40);
+}
+QPushButton:pressed
+{
+	
+	background-color: rgb(112, 152, 31);
+}
+</string>
+      </property>
+      <property name="text">
+       <string>Convert</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="combo_td">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>40</y>
+        <width>111</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:#ff6978;
+font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius:5px</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Bit</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>byte</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>KB</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>MB</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>GB</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>TB</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>540</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="help"/>
+    <addaction name="exit"/>
+   </widget>
+   <addaction name="menu_File"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="help">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+  <action name="exit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
