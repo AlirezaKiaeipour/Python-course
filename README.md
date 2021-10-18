@@ -135,3 +135,88 @@ SpaceCraft Game with arcade library
 ✅ Receive an array from the user and print the index of the largest value.(/argmax)
 
 ✅ Display the description.(/help)
+
+## Assignment16
+
+⚫ Calculator
+
+✅ Simple GUI calculator using Pyside6
+
+✅ Include Sin, Cos, Tan, Cot, Log, Sqrt
+
+
+![Screenshot (52)](https://user-images.githubusercontent.com/88143329/135605121-4710275b-7f88-4890-b57c-d3796f45af47.png)
+
+## Assignment17
+
+⚫ Tic Tac Toe Game
+
+✅ GUI TicTacToe Game using Pyside6
+
+
+![Screenshot (98)](https://user-images.githubusercontent.com/88143329/136156791-e8e2fd95-5366-4423-9207-d5ff82c0d33e.png)
+
+## Assignment18
+
+1. Sudoku Game
+
+✅ GUI Sudoku Game using Pyside6
+
+
+![Screenshot (110)](https://user-images.githubusercontent.com/88143329/137582977-24da9021-6631-40d1-a8c7-c08ab1b28899.png)
+
+2. Unit Converter
+
+✅ GUI Unit Converter using Pyside6
+
+✅ Include Weight, Length, Temperature, Digital volume
+
+
+![Screenshot (108)](https://user-images.githubusercontent.com/88143329/137155591-a6a12215-1a02-4260-bcdd-19581d39621b.png)
+
+3. Guess Number Game
+
+✅ GUI Guess Number Game using Pyside6.
+
+✅ Guess the number between 1 and 50.
+
+
+![Screenshot (104)](https://user-images.githubusercontent.com/88143329/136577754-65ee3e9d-cc25-4e20-9f04-d44aea17e4a2.png)
+
+4. Password Generator
+
+✅ GUI Password Generator using Pyside6.
+
+✅ Specify password length.
+
+✅ Include Lowercase letters, Capital letters, Digits, Symbol in Password.
+
+
+![Screenshot (102)](https://user-images.githubusercontent.com/88143329/136578243-14326368-2a66-4188-838d-c08fde7fb0dd.png)
+
+5. Translation
+
+✅ GUI Translation using Pyside6.
+
+✅ Translation in both Persian and English.
+
+
+![Screenshot (103)](https://user-images.githubusercontent.com/88143329/136577403-8610483c-881f-4d87-a308-5974172ef977.png)
+
+## Assignment19
+
+1. Create a database for the store
+
+✅ Enter the desired information into the table using the INSERT command.
+
+✅ Show only available products using the SELECT command.
+
+✅ Delete non-Iranian customers using the DELETE command.
+
+✅ Reduce the price of all products by 20% using the UPDATE command.
+
+2. A program that checks whether an array is symmetric
+
+3. A program where every boy and girl gets married by chance.
+
+4. Palam Polom Pilish Game
