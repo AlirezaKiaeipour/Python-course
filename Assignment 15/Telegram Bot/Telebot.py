@@ -1,9 +1,11 @@
 import random
+import ast
 from gtts import gTTS
 from khayyam import JalaliDate
 from pytube import YouTube
 import qrcode
 import telebot
+import pysynth_b
 
 
 bot = telebot.TeleBot("Token")
@@ -16,7 +18,21 @@ def welcome(message):
 
 @bot.message_handler(commands=["help"])
 def help(message):
-    bot.send_message(message.chat.id,"کاربر گرامی:\nبا /game شما می توانید بازی حدس عدد را انجام دهید.\nبا /age شما می توانید تاریخ تولد خود را به هجری شمسی وارد کنید تا سن دقیق شما محاسبه شود.\nبا /voice شما می توانید یک جمله انگلیسی را وارد کنید تا برایتان به صورت صوتی پخش شود.\nبا /qrcode شما می توانید اطلاعات مورد نیاز خود را وارد کنید و qrcode آن را دریافت کنید.\nبا /youtube شما می توانید لینک یک ویدیو از یوتوب را وارد کنید و آن ویدیو را دریافت کنید.\nبا /max شما می توانید یک لیستی از اعداد را وارد کنید و بزرگترین عدد را دریافت کنید.\nبا /argmax شما می توانید یک لیستی از اعداد را وارد کنید و اندیس بزرگترین عدد را دریافت کنید.\n")
+    bot.send_message(message.chat.id,"کاربر گرامی:\nبا /game شما می توانید بازی حدس عدد را انجام دهید.\nبا /age شما می توانید تاریخ تولد خود را به هجری شمسی وارد کنید تا سن دقیق شما محاسبه شود.\nبا /voice شما می توانید یک جمله انگلیسی را وارد کنید تا برایتان به صورت صوتی پخش شود.\nبا /qrcode شما می توانید اطلاعات مورد نیاز خود را وارد کنید و qrcode آن را دریافت کنید.\nبا /youtube شما می توانید لینک یک ویدیو از یوتوب را وارد کنید و آن ویدیو را دریافت کنید.\nبا /max شما می توانید یک لیستی از اعداد را وارد کنید و بزرگترین عدد را دریافت کنید.\nبا /argmax شما می توانید یک لیستی از اعداد را وارد کنید و اندیس بزرگترین عدد را دریافت کنید.\nبا /song شما می توانید نت موسیقی را وارد کنید و آهنگ آن را دریافت کنید.")
+
+@bot.message_handler(commands=["song"])
+def song(message):
+    ms = bot.send_message(message.chat.id,"نت موسیقی رو به فرمت زیر بفرست تا برات آهنگ پخش کنم\nexample: ('c', 4), ('e', 4), ('g', 4),('c5', -2), ('e6', 8), ('d#6', 2)")
+    bot.register_next_step_handler(ms,make_song)
+
+def make_song(message):
+    try:
+        music = message.text
+        pysynth_b.make_wav(ast.literal_eval(music), fn = "music.wav", leg_stac = .7, bpm = 180)
+        audio = open("music.wav","rb")
+        bot.send_audio(message.chat.id,audio)
+    except:
+        bot.send_message(message.chat.id,"عملیات ناموفق بود")
 
 @bot.message_handler(commands=["qrcode"])
 def qr(message):

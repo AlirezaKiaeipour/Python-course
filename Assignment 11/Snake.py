@@ -27,7 +27,20 @@ class Snake(arcade.Sprite):
         if len(self.body) > self.length:
             self.body.pop(0)
 
-    def move(self):
+    def move(self,x,y):
+        if self.center_x > x:
+            self.change_x = -1
+        elif self.center_x == x:
+            self.change_x = 0
+        elif self.center_x < x:
+            self.change_x = +1
+        if self.center_y > y:
+            self.change_y = -1
+        elif self.center_y == y:
+            self.change_y = 0
+        elif self.center_y < y:
+            self.change_y = +1
+
         self.center_x += self.change_x * self.speed
         self.center_y += self.change_y * self.speed
 
@@ -112,7 +125,7 @@ class Game(arcade.Window):
             arcade.exit()
                
     def on_update(self, delta_time: float):
-        self.snake.move()
+        self.snake.move(self.apple.img.center_x,self.apple.img.center_y)
         if arcade.check_for_collision(self.snake,self.pear.img):
             self.snake.eat_pear()
             self.pear = Pear(750,650)
@@ -123,19 +136,19 @@ class Game(arcade.Window):
             self.snake.eat_apple()
             self.apple = Apple(750,650)
 
-    def on_key_release(self,key,modifiers):
-        if key == arcade.key.W:
-            self.snake.change_x = 0
-            self.snake.change_y = 1
-        elif key == arcade.key.S:
-            self.snake.change_x = 0
-            self.snake.change_y = -1
-        elif key == arcade.key.D:
-            self.snake.change_x = 1
-            self.snake.change_y = 0
-        elif key == arcade.key.A:
-            self.snake.change_x = -1
-            self.snake.change_y = 0
+    # def on_key_release(self,key,modifiers):
+    #     if key == arcade.key.W:
+    #         self.snake.change_x = 0
+    #         self.snake.change_y = 1
+    #     elif key == arcade.key.S:
+    #         self.snake.change_x = 0
+    #         self.snake.change_y = -1
+    #     elif key == arcade.key.D:
+    #         self.snake.change_x = 1
+    #         self.snake.change_y = 0
+    #     elif key == arcade.key.A:
+    #         self.snake.change_x = -1
+    #         self.snake.change_y = 0
 
 Game()
 arcade.run()

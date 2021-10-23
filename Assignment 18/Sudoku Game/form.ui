@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>501</width>
+    <height>375</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sudoku</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(214, 230, 236);
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="verticalLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>40</y>
+      <width>481</width>
+      <height>291</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout_2">
+     <item>
+      <layout class="QGridLayout" name="gridlayout"/>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout_2">
+       <item>
+        <widget class="QPushButton" name="newgame">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+background-color: rgb(255, 107, 107);
+font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+}
+QPushButton:pressed{
+	background-color: rgb(249, 74, 68);
+}
+QPushButton:hover{
+	
+	background-color: rgb(245, 103, 103);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>New Game</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="check">
+         <property name="styleSheet">
+          <string notr="true">QPushButton
+{background-color: rgb(248, 198, 48);
+font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+}
+QPushButton:pressed{
+	background-color: rgb(222, 168, 41);
+}
+QPushButton:hover{
+	background-color: rgb(238, 180, 44);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Check</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="reset">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+background-color: rgb(137, 128, 245);
+font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+}
+QPushButton:pressed
+{
+	background-color: rgb(101, 95, 182);
+}
+QPushButton:hover
+{
+	background-color: rgb(118, 111, 213);
+}
+</string>
+         </property>
+         <property name="text">
+          <string>Reset</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>148</x>
+      <y>4</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 700 18pt &quot;Segoe UI&quot;;
+color:rgb(26, 83, 92);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>501</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="ac_newgame"/>
+    <addaction name="autocheck"/>
+    <addaction name="exit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="lightmod"/>
+    <addaction name="darkmod"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="help"/>
+   </widget>
+   <addaction name="menu_File"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="ac_newgame">
+   <property name="text">
+    <string>New Game</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+R</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="lightmod">
+   <property name="text">
+    <string>Light Mod</string>
+   </property>
+  </action>
+  <action name="darkmod">
+   <property name="text">
+    <string>Dark Mod</string>
+   </property>
+  </action>
+  <action name="actionAuto_Check">
+   <property name="text">
+    <string>Auto Check</string>
+   </property>
+  </action>
+  <action name="actionStatic_Check">
+   <property name="text">
+    <string>Static Check</string>
+   </property>
+  </action>
+  <action name="help">
+   <property name="text">
+    <string>Info</string>
+   </property>
+  </action>
+  <action name="autocheck">
+   <property name="text">
+    <string>Auto Check</string>
+   </property>
+  </action>
+  <action name="staticcheck">
+   <property name="text">
+    <string>Static Check</string>
+   </property>
+  </action>
+  <action name="exit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
