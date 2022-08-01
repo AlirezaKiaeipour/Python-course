@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>520</width>
+    <height>465</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>520</width>
+    <height>465</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>520</width>
+    <height>465</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Translate</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+background-color: rgb(235, 185, 223);</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>10</y>
+      <width>161</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 700 22pt &quot;Segoe UI&quot;;
+color: rgb(255, 112, 166);</string>
+    </property>
+    <property name="text">
+     <string>Translate</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>100</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(51, 51, 51);</string>
+    </property>
+    <property name="text">
+     <string> Input Text:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>230</y>
+      <width>111</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 700 11pt &quot;Segoe UI&quot;;
+color: rgb(51, 51, 51);</string>
+    </property>
+    <property name="text">
+     <string>Translated Text:</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>310</y>
+      <width>521</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 11pt &quot;Segoe UI&quot;;</string>
+    </property>
+    <property name="title">
+     <string>Language</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <widget class="QRadioButton" name="radio1">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>30</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 700 12pt &quot;Segoe UI&quot;;
+color: rgb(52, 89, 149);</string>
+     </property>
+     <property name="text">
+      <string>English To Persian</string>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="radio2">
+     <property name="geometry">
+      <rect>
+       <x>290</x>
+       <y>30</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 700 12pt &quot;Segoe UI&quot;;
+color: rgb(202, 21, 81);</string>
+     </property>
+     <property name="text">
+      <string>Persian To English</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="btn">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>390</y>
+      <width>501</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	background-color: rgb(255, 151, 112);
+font: 700 12pt &quot;Segoe UI&quot;;
+	color: rgb(255, 255, 255);
+border-radius: 15px;
+}
+QPushButton:hover
+{
+	background-color: rgb(240, 141, 105);
+}
+QPushButton:pressed
+{
+	
+	background-color: rgb(220, 130, 97);
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Translate</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textbox1">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>80</y>
+      <width>371</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(208, 171, 160);
+font: 700 12pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius: 15px;</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textbox2">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>210</y>
+      <width>371</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(208, 171, 160);
+font: 700 12pt &quot;Segoe UI&quot;;
+color: rgb(255, 255, 255);
+border-radius: 15px;</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>520</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_File">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="help"/>
+   </widget>
+   <addaction name="menu_File"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="help">
+   <property name="text">
+    <string>Help</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
